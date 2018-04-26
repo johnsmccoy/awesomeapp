@@ -6,6 +6,7 @@ module.exports = function (grunt) {
             scripts: {
                 files: [
                     "./scripts/**/*.js",
+                    "./styles/**/*.css",
                     "./index.html",
                     "!node_modules/**/*.js"
                 ],
