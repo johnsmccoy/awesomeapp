@@ -17,6 +17,7 @@ const output = document.querySelector(".output")
 // Fragment to hold all the stuff so we inject into the DOM once
 const fragment = document.createDocumentFragment()
 
+// Create the button used to create a card
 const createCardButton = ButtonFactory(
     "button--submit",
     "Create Card",
@@ -26,10 +27,13 @@ const createCardButton = ButtonFactory(
         cardTextInput.value = ""
     }
 )
+
+// Create input field for user to enter in text
 const cardTextInput = InputFactory("input--text", "Enter card text here", "text")
 
+// Append input field and button to fragment
 fragment.appendChild(cardTextInput)
 fragment.appendChild(createCardButton)
 
-
+// Append fragment to DOM
 DomBuilder(fragment, ".output")
